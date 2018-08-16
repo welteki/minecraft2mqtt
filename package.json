@@ -1,7 +1,7 @@
 {
   "name": "minecraft2mqtt",
-  "version": "0.1.0",
-  "description": "Connect",
+  "version": "0.1.1",
+  "description": "Connect minecraft to MQTT",
   "bin": "./dist/index.js",
   "scripts": {
     "start": "node lib/index.js",
