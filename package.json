@@ -1,0 +1,57 @@
+{
+  "name": "minecraft2mqtt",
+  "version": "0.1.0",
+  "description": "Connect",
+  "bin": "./dist/index.js",
+  "scripts": {
+    "start": "node lib/index.js",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "format": "prettier --write \"**/*.{ts,js,md}\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "keywords": [
+    "minecraft",
+    "mqtt",
+    "mqtt-smarthome",
+    "smarthome",
+    "iot"
+  ],
+  "author": "Han Verstraete",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/welteki/minecraft2mqtt"
+  },
+  "bugs": {
+    "url": "https://github.com/welteki/minecraft2mqtt/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "bukkit-openhab-client": "^0.1.2",
+    "loglevel": "^1.6.1",
+    "mqtt": "^2.18.0",
+    "yargs": "^11.0.0"
+  },
+  "devDependencies": {
+    "@types/loglevel": "^1.5.3",
+    "@types/yargs": "^11.0.0",
+    "husky": "^1.0.0-rc.13",
+    "lint-staged": "^7.2.2",
+    "prettier": "^1.14.2",
+    "typescript": "^2.9.1"
+  }
+}
