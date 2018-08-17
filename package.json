@@ -4,11 +4,13 @@
   "description": "Connect minecraft to MQTT",
   "bin": "./index.js",
   "scripts": {
+    "prepublish": "npm run clean && npm run build",
     "start": "node lib/index.js",
     "build": "tsc",
     "watch": "tsc -w",
     "format": "prettier --write \"**/*.{ts,js,md}\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf ./lib"
   },
   "prettier": {
     "singleQuote": true
